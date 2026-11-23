@@ -1,0 +1,6 @@
+# ~/.zprofile — portátil (Apple Silicon e Intel). Versionado em ~/dotfiles.
+
+# Homebrew: /opt/homebrew no arm64, /usr/local no Intel.
+if [[ "$(uname -m)" == "arm64" ]]; then _brew=/opt/homebrew/bin/brew; else _brew=/usr/local/bin/brew; fi
+[[ -x "$_brew" ]] && eval "$("$_brew" shellenv)"
+unset _brew

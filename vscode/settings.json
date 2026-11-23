@@ -1,0 +1,91 @@
+{
+  "r.rterm.mac": "/opt/homebrew/bin/R",
+"r.bracketedPaste": true,
+"r.plot.useHttpgd": true,
+  "r.sessionWatcher": true,
+  "workbench.startupEditor": "newUntitledFile",
+"editor.fontSize": 14,
+"editor.lineHeight": 1.8,
+"javascript.suggest.autoImports": true,
+"javascript.updateImportsOnFileMove.enabled": "always",
+"editor.rulers": [80, 120],
+"editor.parameterHints.enabled": false,
+"editor.renderLineHighlight": "gutter",
+"extensions.ignoreRecommendations": true,
+"breadcrumbs.enabled": false,
+"explorer.compactFolders": false,
+"editor.scrollbar.horizontal": "hidden",
+"editor.scrollbar.vertical": "hidden",
+"explorer.confirmDelete": false,
+"gitlens.codeLens.recentChange.enabled": false,
+"terminal.integrated.showExitAlert": false,
+"typescript.suggest.autoImports": true,
+"terminal.integrated.env.osx": {
+  "FIG_NEW_SESSION": "1"
+},
+"symbols.hidesExplorerArrows": false,
+"window.nativeTabs": false,
+"editor.accessibilitySupport": "off",
+"terminal.integrated.inheritEnv": false,
+"workbench.editorAssociations": {
+  "*.xlsx": "default"
+},
+"liveServer.settings.donotShowInfoMsg": true,
+"git.ignoreMissingGitWarning": true,
+"[dockercompose]": {
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.autoIndent": "advanced",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"[github-actions-workflow]": {
+  "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"sonarlint.focusOnNewCode": true,
+"docker.extension.enableComposeLanguageServer": false,
+"database-client.autoSync": true,
+"cSpell.userWords": [
+  "Inserir"
+],
+"workbench.sideBar.location": "right",
+"sonarlint.automaticAnalysis": true,
+"git.confirmSync": false,
+"diffEditor.ignoreTrimWhitespace": false,
+"terminal.integrated.allowedLinkSchemes": [
+  "file",
+  "http",
+  "https",
+  "mailto",
+  "vscode",
+  "vscode-insiders",
+  "docker-desktop"
+],
+"google.cloud.project": "mhz-prj-hmg-app",
+"geminicodeassist.displayInlineContextHint": false,
+"sonarlint.connectedMode.connections.sonarcloud": [
+  {
+    "organizationKey": "mohzdev",
+    "connectionId": "mohzdev",
+    "region": "EU"
+  }
+],
+"jupyter.runStartupCommands": [
+  "import bigframes",
+  "%load_ext bigframes",
+  "bigframes.options.bigquery.project = \"mhz-prj-hmg-app\"",
+  "bigframes.options.bigquery.application_name = \"datacloud.visual studio code\""
+],
+"terminal.integrated.mouseWheelScrollSensitivity": 3,
+"terminal.integrated.gpuAcceleration": "off",
+"[json]": {
+  "editor.defaultFormatter": "vscode.json-language-features"
+},
+"claudeCode.preferredLocation": "panel",
+"claudeCode.hideOnboarding": true,
+"snowflake.connectionsConfigFile": "/Users/arnaldoquagliato/Library/Application Support/snowflake/config.toml"
+}

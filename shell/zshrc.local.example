@@ -1,0 +1,5 @@
+# ~/.zshrc.local — específico DESTA máquina. Não vai para o git.
+# Coloque aqui: tokens, aliases de cliente, paths que só existem neste Mac.
+#
+# export SOME_API_TOKEN="..."
+# alias work="cd ~/Documents/profissional"

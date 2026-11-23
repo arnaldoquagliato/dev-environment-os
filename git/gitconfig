@@ -1,0 +1,12 @@
+[user]
+	name = arnaldoquagliato
+	email = arnaldoquagliato@gmail.com
+[pull]
+	ff = only
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[includeIf "gitdir:~/Documents/profissional/fullstack-developer/vpn/"]
+	path = ~/.gitconfig-vpn

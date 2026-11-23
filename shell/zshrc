@@ -1,0 +1,56 @@
+# ~/.zshrc — portátil (Apple Silicon e Intel). Versionado em ~/dotfiles.
+# Nada de caminho fixo: tudo deriva de $HOMEBREW_PREFIX e $HOME.
+# Coisas só desta máquina (segredos, paths locais) → ~/.zshrc.local (não versionado).
+
+# --- Homebrew (garante também em shells que não são de login) ---------------
+if [[ -z "${HOMEBREW_PREFIX:-}" ]]; then
+  if [[ "$(uname -m)" == "arm64" ]]; then _brew=/opt/homebrew/bin/brew; else _brew=/usr/local/bin/brew; fi
+  [[ -x "$_brew" ]] && eval "$("$_brew" shellenv)"
+  unset _brew
+fi
+
+# --- Node via nvm -----------------------------------------------------------
+export NVM_DIR="$HOME/.nvm"
+if   [[ -s "$NVM_DIR/nvm.sh" ]];                 then . "$NVM_DIR/nvm.sh"
+elif [[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]]; then . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+fi
+[[ -s "$NVM_DIR/bash_completion" ]] && . "$NVM_DIR/bash_completion"
+
+# --- Java -------------------------------------------------------------------
+[[ -d "$HOMEBREW_PREFIX/opt/openjdk@17" ]] && export JAVA_HOME="$HOMEBREW_PREFIX/opt/openjdk@17"
+
+# --- Android ----------------------------------------------------------------
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
+
+# --- PostgreSQL client (libpq) ----------------------------------------------
+[[ -d "$HOMEBREW_PREFIX/opt/libpq/bin" ]] && export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
+
+# --- Google Cloud SDK (cask gcloud-cli) -------------------------------------
+_gcloud="$HOMEBREW_PREFIX/share/google-cloud-sdk"
+[[ -f "$_gcloud/path.zsh.inc" ]]       && . "$_gcloud/path.zsh.inc"
+[[ -f "$_gcloud/completion.zsh.inc" ]] && . "$_gcloud/completion.zsh.inc"
+unset _gcloud
+
+# --- Conda (cask miniforge) — sem ativar o base automaticamente -------------
+_conda="$HOMEBREW_PREFIX/Caskroom/miniforge/base/bin/conda"
+if [[ -x "$_conda" ]]; then
+  eval "$("$_conda" shell.zsh hook 2>/dev/null)"
+  export CONDA_AUTO_ACTIVATE_BASE=false
+fi
+unset _conda
+
+# --- VS Code CLI ------------------------------------------------------------
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# --- Ruby via rvm -----------------------------------------------------------
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# --- Binários do usuário + completions --------------------------------------
+export PATH="$HOME/.local/bin:$PATH"
+[[ -s "$HOME/.zsh/completions/cortex.zsh" ]] && . "$HOME/.zsh/completions/cortex.zsh"
+
+# --- Overrides locais (não versionados) -------------------------------------
+[[ -f "$HOME/.zshrc.local" ]] && . "$HOME/.zshrc.local"

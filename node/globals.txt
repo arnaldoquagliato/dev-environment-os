@@ -1,0 +1,2 @@
+@expo/ngrok
+eas-cli

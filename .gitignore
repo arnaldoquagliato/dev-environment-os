@@ -3,3 +3,6 @@
 .env
 .env.*
 vscode/mcp.json
+*.zip
+*.gpg
+*.p8

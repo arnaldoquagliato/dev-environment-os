@@ -72,5 +72,4 @@ tomoki1207.pdf
 usernamehw.errorlens
 wakatime.vscode-wakatime
 willasm.obsidian-md-vsc
-withfig.fig
 zignd.html-css-class-completion

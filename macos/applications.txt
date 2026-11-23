@@ -1,21 +1,10 @@
 (A Document Being Saved By Sparkle)
-AI Chat
 AdBlock
 Android Studio
-ApowerREC
-Canva
-ChatGPT Atlas
 ChatGPT Classic
 Company Portal
 DBeaver
-Discord
 Docker
-Epic Games Launcher
-Firefox
-GPG Keychain
-Google Chrome
-Keynote
-Meet+
 Microsoft 365 Copilot Shim
 Microsoft Defender
 Microsoft Edge
@@ -34,16 +23,9 @@ Python 3.11
 Python 3.13
 Safari
 Sniffy
-Spotify
-Steam
-Telegram
 TestFlight
 Utilities
 VSD Viewer & VSD Converter
 Visual Studio Code
-WhatsApp
 Wireshark
 Xcode
-iTerm
-iwallpaper
-zoom.us

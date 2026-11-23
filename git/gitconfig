@@ -8,5 +8,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[includeIf "gitdir:~/Documents/profissional/fullstack-developer/vpn/"]
-	path = ~/.gitconfig-vpn
+# Específico da máquina (não versionado). Ex.: identidade de trabalho via includeIf.
+[include]
+	path = ~/.gitconfig.local
